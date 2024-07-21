@@ -1,5 +1,5 @@
 #include <raylib.h>
-#include "grid.h"
+#include "game.h"
 
 int main()
 {
@@ -11,15 +11,13 @@ int main()
     InitWindow(screenWidth, screenHeight, "Tetris C++");
     SetTargetFPS(60);
 
-    Grid grid = Grid();
-    grid.grid[0][0] = 1;
-    grid.Print();
+    Game game = Game();
 
     while (!WindowShouldClose())
     {
         BeginDrawing();
         ClearBackground(darkBlue);
-        grid.Draw();
+        game.Draw();
         EndDrawing();
     }
 

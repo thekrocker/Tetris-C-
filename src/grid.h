@@ -14,5 +14,4 @@ private:
 int numRows, numColumns, cellSize;
 void Initialize();
 std::vector<Color> colors;
-std::vector<Color> GetCellColors();
 };
