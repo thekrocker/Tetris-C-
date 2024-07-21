@@ -20,5 +20,6 @@ private:
     void MoveLeft();
     void MoveRight();
     void MoveDown();
+    void Rotate();
     bool IsBlockOutOfGrid();
 };

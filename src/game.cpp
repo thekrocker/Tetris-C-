@@ -40,6 +40,9 @@ void Game::HandleInput()
     case KEY_DOWN:
         MoveDown();
         break;
+
+    case KEY_UP:
+        Rotate();
     }
 }
 
@@ -68,6 +71,15 @@ void Game::MoveDown()
     if (IsBlockOutOfGrid())
     {
         currentBlock.Move(-1, 0);
+    }
+}
+
+void Game::Rotate()
+{
+    currentBlock.Rotate();
+    if (IsBlockOutOfGrid())
+    {
+        currentBlock.UndoRotate();
     }
 }
 
