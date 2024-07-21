@@ -5,9 +5,10 @@
 
 class Game
 {
-    public:
+public:
     Game();
     Block GetRandomBlock();
+    void HandleInput();
     void Draw();
     Grid grid;
 
@@ -16,4 +17,8 @@ private:
     std::vector<Block> blocks;
     Block currentBlock;
     Block nextBlock;
+    void MoveLeft();
+    void MoveRight();
+    void MoveDown();
+    bool IsBlockOutOfGrid();
 };

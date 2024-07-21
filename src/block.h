@@ -12,6 +12,7 @@ public:
     std::map<int, std::vector<Position>> cells;
     void Draw();
     void Move(int row, int column);
+    std::vector<Position> GetCellPositions();
 
 private:
     int cellSize;
@@ -19,5 +20,4 @@ private:
     int rowOffset;
     int columnOffset;
     std::vector<Color> colors;
-    std::vector<Position> GetCellPositions();
 };
